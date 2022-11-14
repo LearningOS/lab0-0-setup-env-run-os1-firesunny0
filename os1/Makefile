@@ -26,7 +26,7 @@ env:
 	cargo install cargo-binutils
 
 kernel:
-	@cargo build --release
+	@cargo build --release 
 
 clean:
 	@cargo clean
@@ -37,6 +37,7 @@ run: build
 		-nographic \
 		-bios $(BOOTLOADER) \
 		-device loader,file=$(KERNEL_BIN),addr=$(KERNEL_ENTRY_PA)
+
 
 debug: build
 	@tmux new-session -d \
