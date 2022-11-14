@@ -44,5 +44,4 @@ pub fn init() {
         Some("TRACE") => LevelFilter::Trace,
         _ => LevelFilter::Off,
     });
-    log::set_max_level(LevelFilter::Trace);
 }
